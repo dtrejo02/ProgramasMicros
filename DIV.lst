@@ -1,4 +1,4 @@
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  1
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0001   0186           00008                         CLRF                    PORTB
 0002   0187           00009                         CLRF                    PORTC
 0003   0188           00010                         CLRF                    PORTD
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  2
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -106,27 +106,24 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 0024   1786           00033                         BSF                     PORTB,7
 0025   280D           00034                         GOTO            INICIO
                       00035 
-0026   0000           00036 DIVA            NOP
-0027   0AA2           00037                         INCF            0X22,F
-0028   0821           00038                         MOVF            0X21,W
-0029   02A0           00039                         SUBWF           0X20,F
-002A   1803           00040                         BTFSC           STATUS,C
-002B   2826           00041                         GOTO            DIVA
-002C   1903           00042                         BTFSC           STATUS,Z
-002D   282F           00043                         GOTO            SALIDADIV
-002E   1786           00044                         BSF                     PORTB,7
-                      00045 
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  3
+0026   0AA2           00036 DIVA            INCF            0X22,F  ;CNT=CNT+1
+0027   0821           00037                         MOVF            0X21,W  ;B
+0028   02A0           00038                         SUBWF           0X20,F  ;A=A-W PERO W=B
+0029   1C03           00039                         BTFSS           STATUS,C        
+002A   2826           00040                         GOTO            DIVA
+002B   1D03           00041                         BTFSS           STATUS,Z
+002C   1786           00042                         BSF                     PORTB,7 
+002D   0087           00043                         MOVWF           PORTC
+002E   282E           00044                         GOTO            $
+                      00045                         
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-002F   0822           00046 SALIDADIV       MOVF            0X22,W
-0030   0087           00047                         MOVWF           PORTC
-                      00048                         
-                      00049                         END
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  4
+                      00046                         END
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  4
 
 
 SYMBOL TABLE
@@ -185,7 +182,7 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  5
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  5
 
 
 SYMBOL TABLE
@@ -244,7 +241,7 @@ CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
 CHS3                              00000005
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  6
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  6
 
 
 SYMBOL TABLE
@@ -303,7 +300,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IOCB                              00000096
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  7
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  7
 
 
 SYMBOL TABLE
@@ -362,7 +359,7 @@ PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
 PDC1                              00000001
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  8
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  8
 
 
 SYMBOL TABLE
@@ -421,7 +418,7 @@ RBIE                              00000003
 RBIF                              00000000
 RC0                               00000000
 RC1                               00000001
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE  9
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE  9
 
 
 SYMBOL TABLE
@@ -464,7 +461,6 @@ RX9D                              00000000
 R_NOT_W                           00000002
 R_W                               00000002
 S                                 00000003
-SALIDADIV                         0000002F
 SBOREN                            00000004
 SCKP                              00000004
 SCS                               00000000
@@ -480,13 +476,13 @@ SRCON                             00000185
 SREN                              00000005
 SSPADD                            00000093
 SSPBUF                            00000013
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE 10
+SSPCON                            00000014
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-SSPCON                            00000014
 SSPCON2                           00000091
 SSPEN                             00000005
 SSPIE                             00000003
@@ -539,13 +535,13 @@ TMR1L                             0000000E
 TMR1ON                            00000000
 TMR2                              00000011
 TMR2IE                            00000001
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE 11
+TMR2IF                            00000001
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TMR2IF                            00000001
 TMR2ON                            00000002
 TOUTPS0                           00000003
 TOUTPS1                           00000004
@@ -598,13 +594,13 @@ TUN1                              00000001
 TUN2                              00000002
 TUN3                              00000003
 TUN4                              00000004
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE 12
+TX8_9                             00000006
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TX8_9                             00000006
 TX9                               00000006
 TX9D                              00000000
 TXD8                              00000000
@@ -657,13 +653,13 @@ _BOREN_NSLEEP                     00003EFF
 _BOREN_OFF                        00003CFF
 _BOREN_ON                         00003FFF
 _BOREN_SBODEN                     00003DFF
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE 13
+_BOR_NSLEEP                       00003EFF
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE 13
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_BOR_NSLEEP                       00003EFF
 _BOR_OFF                          00003CFF
 _BOR_ON                           00003FFF
 _BOR_SBODEN                       00003DFF
@@ -716,13 +712,13 @@ _WDT_ON                           00003FFF
 _WRT_1FOURTH                      00003BFF
 _WRT_256                          00003DFF
 _WRT_HALF                         000039FF
-MPASM  5.51                           DIV.ASM   9-13-2023  21:10:53         PAGE 14
+_WRT_OFF                          00003FFF
+MPASM  5.51                           DIV.ASM   9-14-2023  12:54:19         PAGE 14
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
 __DEBUG                           1
@@ -730,13 +726,13 @@ __DEBUG                           1
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
-0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX X---------------
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXX- ----------------
 2000 : -------XX------- ---------------- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:    49
-Program Memory Words Free:  8143
+Program Memory Words Used:    47
+Program Memory Words Free:  8145
 
 
 Errors   :     0
