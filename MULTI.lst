@@ -1,4 +1,4 @@
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  1
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0001   0186           00008                         CLRF                    PORTB
 0002   0187           00009                         CLRF                    PORTC
 0003   0188           00010                         CLRF                    PORTD
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  2
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -95,28 +95,35 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 001A   281E           00022                         GOTO            TESTB
 001B   3000           00023                         MOVLW           0X00
 001C   0087           00024                         MOVWF           PORTC
-001D   280D           00025                         GOTO            INICIO
+001D   281D           00025                         GOTO            $
                       00026 
 001E   30FF           00027 TESTB           MOVLW           0XFF
 001F   0521           00028                         ANDWF           0X21,W  ;PROBAMOS SI B=0
 0020   1D03           00029                         BTFSS           STATUS,Z
-0021   2825           00030                         GOTO            DECMULT
+0021   2825           00030                         GOTO            BUCLE
 0022   3000           00031                         MOVLW           0X00
 0023   0087           00032                         MOVWF           PORTC
 0024   2824           00033                         GOTO            $
-                      00034 
-0025   0BA1           00035 DECMULT         DECFSZ          0X21,F
-0026   282A           00036                         GOTO            BUCLEMULT
-0027   0822           00037                         MOVF            0X22,W
-0028   0087           00038                         MOVWF           PORTC
-0029   280D           00039                         GOTO            INICIO
-                      00040 
-002A   0820           00041 BUCLEMULT       MOVF            0X20,W
-002B   07A2           00042                         ADDWF           0X22,F
-002C   2825           00043                         GOTO            DECMULT
+                      00034                         
+0025   0820           00035 BUCLE           MOVF            0X20,W  ;LEEO A 
+0026   07A2           00036                         ADDWF           0X22,F  ;D=D+A
+0027   0BA1           00037                         DECFSZ          0X21,F  ;B
+0028   2825           00038                         GOTO            BUCLE           
+0029   0822           00039                         MOVF            0X22,W
+002A   0087           00040                         MOVWF           PORTC
+002B   1803           00041                         BTFSC           STATUS,C
+002C   1786           00042                         BSF                     PORTB,7
+002D   282D           00043                         GOTO            $
                       00044 
-                      00045                         END
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  3
+                      00045 
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00046                         END
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  4
 
 
 SYMBOL TABLE
@@ -175,14 +182,14 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  4
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  5
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
 BRGH                              00000002
-BUCLEMULT                         0000002A
+BUCLE                             00000025
 C                                 00000000
 C1CH0                             00000000
 C1CH1                             00000001
@@ -234,7 +241,7 @@ CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  5
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  6
 
 
 SYMBOL TABLE
@@ -255,7 +262,6 @@ DC1B0                             00000004
 DC1B1                             00000005
 DC2B0                             00000004
 DC2B1                             00000005
-DECMULT                           00000025
 D_A                               00000005
 D_NOT_A                           00000005
 ECCPAS                            0000009C
@@ -293,13 +299,13 @@ INTCON                            0000000B
 INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  6
+IOCB                              00000096
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  7
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-IOCB                              00000096
 IOCB0                             00000000
 IOCB1                             00000001
 IOCB2                             00000002
@@ -352,13 +358,13 @@ PCL                               00000002
 PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  7
+PDC1                              00000001
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  8
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-PDC1                              00000001
 PDC2                              00000002
 PDC3                              00000003
 PDC4                              00000004
@@ -411,13 +417,13 @@ RB7                               00000007
 RBIE                              00000003
 RBIF                              00000000
 RC0                               00000000
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  8
+RC1                               00000001
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-RC1                               00000001
 RC2                               00000002
 RC3                               00000003
 RC4                               00000004
@@ -470,13 +476,13 @@ SRCON                             00000185
 SREN                              00000005
 SSPADD                            00000093
 SSPBUF                            00000013
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE  9
+SSPCON                            00000014
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-SSPCON                            00000014
 SSPCON2                           00000091
 SSPEN                             00000005
 SSPIE                             00000003
@@ -529,13 +535,13 @@ TMR1L                             0000000E
 TMR1ON                            00000000
 TMR2                              00000011
 TMR2IE                            00000001
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE 10
+TMR2IF                            00000001
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TMR2IF                            00000001
 TMR2ON                            00000002
 TOUTPS0                           00000003
 TOUTPS1                           00000004
@@ -588,13 +594,13 @@ TUN1                              00000001
 TUN2                              00000002
 TUN3                              00000003
 TUN4                              00000004
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE 11
+TX8_9                             00000006
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TX8_9                             00000006
 TX9                               00000006
 TX9D                              00000000
 TXD8                              00000000
@@ -647,13 +653,13 @@ _BOREN_NSLEEP                     00003EFF
 _BOREN_OFF                        00003CFF
 _BOREN_ON                         00003FFF
 _BOREN_SBODEN                     00003DFF
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE 12
+_BOR_NSLEEP                       00003EFF
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE 13
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_BOR_NSLEEP                       00003EFF
 _BOR_OFF                          00003CFF
 _BOR_ON                           00003FFF
 _BOR_SBODEN                       00003DFF
@@ -706,13 +712,13 @@ _WDT_ON                           00003FFF
 _WRT_1FOURTH                      00003BFF
 _WRT_256                          00003DFF
 _WRT_HALF                         000039FF
-MPASM  5.51                         MULTI.ASM   9-14-2023  13:12:21         PAGE 13
+_WRT_OFF                          00003FFF
+MPASM  5.51                         MULTI.ASM   9-14-2023  13:39:44         PAGE 14
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
 __DEBUG                           1
@@ -720,13 +726,13 @@ __DEBUG                           1
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
-0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXX--- ----------------
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXX-- ----------------
 2000 : -------XX------- ---------------- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:    45
-Program Memory Words Free:  8147
+Program Memory Words Used:    46
+Program Memory Words Free:  8146
 
 
 Errors   :     0

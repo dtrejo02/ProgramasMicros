@@ -1,11 +1,11 @@
 MPLINK 4.49, Linker
-Linker Map File - Created Thu Sep 14 13:12:22 2023
+Linker Map File - Created Thu Sep 14 13:39:44 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                    .org_0       code   0x000000    program   0x000000
-                   .org_1       code   0x000000    program   0x00005a
+                   .org_1       code   0x000000    program   0x00005c
      .config_2007_MULTI.O       code   0x002007    program   0x000002
      .config_2008_MULTI.O       code   0x002008    program   0x000002
 
@@ -14,17 +14,16 @@ Linker Map File - Created Thu Sep 14 13:12:22 2023
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00002c      
+                            0x000000    0x00002d      
                             0x002007    0x002008      
-            47 out of 8455 program addresses used, program memory utilization is 0%
+            48 out of 8455 program addresses used, program memory utilization is 0%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                BUCLEMULT   0x00002a    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
-                  DECMULT   0x000025    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
+                    BUCLE   0x000025    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
                    INICIO   0x00000d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
                      PUSH   0x000012    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
                     TESTB   0x00001e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
@@ -37,7 +36,6 @@ Linker Map File - Created Thu Sep 14 13:12:22 2023
                    INICIO   0x00000d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
                      PUSH   0x000012    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
                     TESTB   0x00001e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
-                  DECMULT   0x000025    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
-                BUCLEMULT   0x00002a    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
+                    BUCLE   0x000025    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\MULTI.ASM
 
 
