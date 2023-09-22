@@ -1,0 +1,57 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Sun Sep 17 16:10:02 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x00013c
+   .config_2007_SONIDO2.O       code   0x002007    program   0x000002
+   .config_2008_SONIDO2.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00009d      
+                            0x002007    0x002008      
+            160 out of 8455 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  DECRE2V   0x000086    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x000093    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                       F1   0x000066    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F3   0x000021    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F4   0x00003e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F5   0x000056    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                   INICIO   0x00000c    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                RECARGA3V   0x000091    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST1V   0x00007d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x000084    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x00008f    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                    T25MS   0x000075    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x00000c    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F3   0x000021    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F4   0x00003e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F5   0x000056    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                       F1   0x000066    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                    T25MS   0x000075    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\74-76\SONIDO2.ASM
+                     ST1V   0x00007d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x000084    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE2V   0x000086    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x00008f    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                RECARGA3V   0x000091    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x000093    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+
+
