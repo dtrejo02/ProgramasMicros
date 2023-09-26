@@ -1,0 +1,11 @@
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 2 : Found label after column 1. (DATOA)
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 3 : Found label after column 1. (DATOB)
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 4 : Found label after column 1. (DATOD)
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 5 : Found label after column 1. (CNT)
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 6 : Found label after column 1. (RESB)
+Warning[207] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 7 : Found label after column 1. (SEQ)
+Message[302] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\ENCABEZADO\ENCABEZADO.ASM 14 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\ENCABEZADO\ENCABEZADO.ASM 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 10 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\DTREJ\DOCUMENTS\ESCUELA\MICROS\PROGRAMAS\PRAC2\PRAC2.ASM 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.

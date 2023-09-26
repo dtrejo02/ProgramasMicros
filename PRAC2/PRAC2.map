@@ -1,0 +1,69 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Tue Sep 26 12:50:23 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000206
+     .config_2007_PRAC2.O       code   0x002007    program   0x000002
+     .config_2008_PRAC2.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000102      
+                            0x002007    0x002008      
+            261 out of 8455 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    CALCU   0x00005c    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                  DECRE2V   0x0000e3    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x0000f0    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     G135   0x000045    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                      G45   0x000017    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                      G90   0x00002e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    GD135   0x00004b    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     GD45   0x00001d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     GD90   0x000034    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                  GUARDA2   0x000065    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    LUCES   0x000072    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    MS300   0x0000d2    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                   PUSHES   0x00000e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                RECARGA3V   0x0000ee    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST1V   0x0000da    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x0000e1    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x0000ec    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                    T25MS   0x0000fb    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   PUSHES   0x00000e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                      G45   0x000017    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     GD45   0x00001d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                      G90   0x00002e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     GD90   0x000034    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     G135   0x000045    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    GD135   0x00004b    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    CALCU   0x00005c    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                  GUARDA2   0x000065    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    LUCES   0x000072    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                    MS300   0x0000d2    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+                     ST1V   0x0000da    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x0000e1    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE2V   0x0000e3    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x0000ec    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                RECARGA3V   0x0000ee    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x0000f0    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                    T25MS   0x0000fb    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRAC2.ASM
+
+

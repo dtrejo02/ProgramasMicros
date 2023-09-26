@@ -1,0 +1,47 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Mon Sep 25 19:39:58 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000070
+ .config_2007_DELAY1SEG.O       code   0x002007    program   0x000002
+ .config_2008_DELAY1SEG.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000037      
+                            0x002007    0x002008      
+            58 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     COMP   0x00000d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRUEBAS INDIVIDUALES\DELAY1SEG.ASM
+                  DECRE2V   0x000020    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x00002d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                RECARGA3V   0x00002b    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST1V   0x000017    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x00001e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x000029    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     COMP   0x00000d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\PRAC2\PRUEBAS INDIVIDUALES\DELAY1SEG.ASM
+                     ST1V   0x000017    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST2V   0x00001e    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE2V   0x000020    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                     ST3V   0x000029    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                RECARGA3V   0x00002b    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+                  DECRE3V   0x00002d    program     static D:\dtrej\Documents\Escuela\Micros\PROGRAMAS\VIDEOS\SUBRUTINAS\SUBRUTINASDETIEMPO.ASM
+
+

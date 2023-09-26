@@ -32,6 +32,6 @@ PUSHMAC		MACRO		PUERTO,PIN
 			ENDM
 ;*************************************
 SUBT25MS	MACRO
-T25MS:		SUBT3V		.3,.47,.25
+T25MS:		SUBT3V		.67,.17,.3
 			RETURN
 			ENDM
